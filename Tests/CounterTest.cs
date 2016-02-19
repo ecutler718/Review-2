@@ -5,29 +5,34 @@ namespace CountProject.Objects
   public class CountTest
   {
     [Fact]
-    public void Word_forStringInput NotContainingWord_0()
+    public void Word_forStringInputNotContainingWord_0()
     {
-     the test should pass if there is no repeating word
+      Count newCount = new Count ("test", "result should be 0");
+      Assert.Equal(newCount.Repeats(), 0);
     }
     [Fact]
-    public void Word_forStringInput IsWord_1()
+    public void Word_forStringInputIsWord_1()
     {
-     the test should pass if the input equals the input is the given string 
+      Count newCount = new Count ("test", "test");
+      Assert.Equal(newCount.Repeats(), 1);
     }
     [Fact]
-    public void Word_forStringInput ContainsWordOneTime()
+    public void Word_forStringInputContainsWordOneTime_1()
     {
-     the test should pass if the input is in the string once but does not equal the string
+      Count newCount = new Count ("test", "this is the test");
+       Assert.Equal(newCount.Repeats(), 1);
     }
     [Fact]
-    public void Word_forStringInput ContainsWordMutipleTimes_3()
+    public void Word_forStringInputContainsWordMutipleTimes_3()
     {
-      the test should pass if the word is in the string multipe times
+      Count newCount = new Count ("test", "this is a test that will test how many times this string contains test");
+      Assert.Equal(newCount.Repeats(), 3);
     }
     [Fact]
-    public void Word_forStringInput ContainsWordMutipleTimesExactlyAsEntered()
+    public void Word_forStringInputContainsWordMutipleTimesExactlyAsEntered_3()
     {
-      the test should pass if the word is in the string multiple times exactly as entered
+      Count newCount = new Count ("test", "test || t e s t || test || htrbgftest || test ");
+      Assert.Equal(newCount.Repeats(), 2);
     }
   }
 }
