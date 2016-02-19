@@ -1,0 +1,12 @@
+I did not read that it should be a separate file from the test.cs file so I did make the plain english tests as my first commit after setting up the files but they did not have their own file so i will just copy what i commited then here.
+
+Test1
+  the test should pass if there is no repeating word
+Test2
+  the test should pass if the input equals the input is the given string
+Test3
+  the test should pass if the input is in the string once but does not equal the string
+Test4
+  the test should pass if the word is in the string multipe times
+Test5
+  the test should pass if the word is in the string multiple times exactly as entered
