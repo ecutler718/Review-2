@@ -31,8 +31,8 @@ namespace CountProject.Objects
     [Fact]
     public void Word_forStringInputContainsWordMutipleTimesExactlyAsEntered_3()
     {
-      Count newCount = new Count ("test", "test || t e s t || test || htrbgftest || test ");
-      Assert.Equal(newCount.Repeats(), 2);
+      Count newCount = new Count ("test", "test  t e s t  test  htrbgftest  test ");
+      Assert.Equal(newCount.Repeats(), 3);
     }
   }
 }
