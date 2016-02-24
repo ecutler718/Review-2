@@ -1,8 +1,8 @@
 using Nancy;
-using CountProject.Objects;
+using CountRepeatProject.Objects;
 using System.Collections.Generic;
 
-namespace CountProject
+namespace CountRepeatProject
 {
   public class HomeModule : NancyModule
   {
@@ -12,8 +12,8 @@ namespace CountProject
       Get["/"] = _ => View["index.cshtml"];
       Post["/result"] = _ =>
       {
-        Count newCount = new Count(Request.Form["Input"], Request.Form["CheckAgainst"]);
-        int result = newCount.Repeats();
+        RepeatCounter newRepeatCounter = new RepeatCounter(Request.Form["Input"], Request.Form["CheckAgainst"]);
+        int result = newRepeatCounter.CountRepeats();
         return View["result.cshtml", result];
       };
     }

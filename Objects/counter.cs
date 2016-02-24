@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace CountProject.Objects
+namespace CountRepeatProject.Objects
 {
-  public class Count
+  public class RepeatCounter
   {
    private string _Input;
    private string _CheckAgainst;
 
-   public Count( string Input, string CheckAgainst)
+   public RepeatCounter( string Input, string CheckAgainst)
    {
      _Input = Input;
      _CheckAgainst = CheckAgainst;
@@ -23,7 +23,7 @@ namespace CountProject.Objects
      return _CheckAgainst;
    }
 
-   public int Repeats()
+   public int CountRepeats()
    {
      int result = Regex.Matches(_CheckAgainst, @"\b" + @_Input + @"\b").Count;
      return result;
